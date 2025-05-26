@@ -24,6 +24,7 @@ const mediaRoutes = require('./routes/mediaRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const marketingPlanRoutes = require('./routes/marketingPlanRoutes');
 const mediaFilesRoutes = require('./routes/mediaFiles');
+const logoRoutes = require('./routes/logoRoutes');
 
 
 // Mount routes with clear paths
@@ -34,6 +35,8 @@ app.use('/api/v1/media-files', mediaRoutes);
 app.use('/api/v1/chat', chatRoutes);
 app.use('/api/v1/marketing-plans', marketingPlanRoutes);
 app.use('/api/v1/media-files', mediaFilesRoutes);
+app.use('/api/v1/logos', logoRoutes);
+
 // Base route
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to AI Branding API' });
